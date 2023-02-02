@@ -1,0 +1,15 @@
+{% extends "me.html" %}
+{% block content %}
+          <h2 style="color: blue; font-family: Times New Roman; font-size: 28px;">Контакти</h2>
+           <ul>
+            <li style="font-family: Times New Roman; font-size: 18px;">E-mail:</li>
+            <li style="font-family: Times New Roman; font-size: 18px;">Мобільний телефон:</li>
+           </ul>
+          <h3 style="font-family: Times New Roman; font-size: 24px;">Надішли повідомлення</h3>
+           <form action="\me" method="post">
+            <textarea rows="3" cols="28" input type = "text" name = "name">
+            </textarea>
+            <input type = "submit" value = "Надіслати"/>
+           </form>
+{% endblock %}
+    
