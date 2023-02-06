@@ -28,7 +28,7 @@ def currency():
 @app.route("/currency", methods=["get", "post"])
 def cost():
  code = request.form['code']
- amount = int(request.form['name'])
+ amount = int(request.form['amount'])
  for item in items:
    if code==item['code']:
     cost = round(item['ask'] * amount, 2)
