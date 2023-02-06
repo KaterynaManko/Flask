@@ -26,13 +26,13 @@ def currency():
  return render_template("currency_calculator.html", items=items)
 
 @app.route("/currency", methods=["get", "post"])
-def amount():
- name1 = request.form['code']
- name2 = int(request.form['name'])
+def cost():
+ code = request.form['code']
+ amount = int(request.form['name'])
  for item in items:
-   if name1==item['code']:
-    cost = round(item['ask'] * name2, 2)
- return render_template("currency_calculator.html", name1=name1, name2=name2, items=items, cost=cost)
+   if code==item['code']:
+    cost = round(item['ask'] * amount, 2)
+ return render_template("currency_calculator.html", code=code, amount=amount, items=items, cost=cost)
 
 if __name__ =='__main__':
  app.run(debug=True)
